@@ -8,7 +8,7 @@ const teamMembers = [
   {
     name: 'Naziba Radia',
     role: 'PM',
-    blurb: 'Manages the project and coordinates the team',
+    blurb: 'Manages the project and coordinates the team, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb,',
   },
   {
     name: 'Hoang Vo',
