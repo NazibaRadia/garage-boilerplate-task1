@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Team',
@@ -9,21 +10,25 @@ const teamMembers = [
     name: 'Naziba Radia',
     role: 'PM',
     blurb: 'Manages the project and coordinates the team, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb, now adding a very long blurb,',
+    image: '/team/PM.png',
   },
   {
     name: 'Hoang Vo',
     role: 'Developer',
     blurb: 'Builds and implements the application features',
+    image: '/team/Dev1.png',
   },
   {
     name: 'Mirna Isso',
     role: 'Developer',
     blurb: 'Tests the application and application features',
+    image: '/team/Dev2.png',
   },
   {
     name: 'Jerome Mangalindan',
     role: 'UX Designer',
     blurb: 'Designs the user interface and experience',
+    image: '/team/UX.png',
   },
 ]
 
@@ -48,9 +53,14 @@ export default function TeamPage() {
               key={member.name}
               className="flex min-h-[360px] flex-col items-center rounded-md border border-zinc-600 px-3 py-5 text-center"
             >
-              <div className="mb-4 flex flex-col items-center">
-                <div className="h-12 w-12 rounded-full border border-zinc-600" />
-                <div className="mt-2 h-16 w-14 rounded-t-full border border-zinc-600" />
+              <div className="mb-4">
+                <Image
+                  src={member.image}
+                  alt={`${member.name} profile photo`}
+                  width={96}
+                  height={96}
+                  className="h-24 w-24 rounded-full border border-zinc-600 object-cover"
+                />
               </div>
 
               <p className="text-sm font-medium text-zinc-900">{member.name}</p>
